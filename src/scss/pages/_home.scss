@@ -2,7 +2,7 @@ section {
   padding-block: 7.5rem;
   img {
     width: 100%;
-    height: 100%;
+    max-height: 100%;
   }
 
   .note {
@@ -16,6 +16,7 @@ section {
   h2.title {
     font-family: "Roboto Slab";
     font-size: 4.2rem;
+    font-size: clamp(2.8rem, calc(2.2rem + 1.5vw), 4.2rem);
     font-weight: 700;
     line-height: 1.2;
     text-wrap: balance;
@@ -71,6 +72,14 @@ section {
     }
   }
 
+  .hero-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: auto;
+  }
+
   .hero-img {
     position: relative;
     background: #000;
@@ -120,10 +129,11 @@ section {
 
     .img-play {
       position: absolute;
-      top: -12%;
-      left: -12%;
+      top: -11%;
+      left: -10%;
       width: 24%;
       height: 24%;
+      cursor: pointer;
     }
 
     .img-mask {
@@ -211,7 +221,7 @@ section {
 }
 
 .services {
-  .services-content {
+  .services-top {
     text-align: center;
 
     .title {
@@ -226,27 +236,32 @@ section {
     }
   }
 
-  .services-blog {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
+  .card-wrap {
+    min-width: 320px;
+    flex-grow: 1;
+  }
 
-    .blog-card {
-      position: relative;
-      width: 370px;
-      height: 370px;
+  .card {
+    position: relative;
+    .card-img {
+      margin-bottom: 30px;
+      aspect-ratio: 1/1;
       object-fit: cover;
+      object-position: top;
     }
 
     .btn-link {
       position: absolute;
-      bottom: 6%;
-      left: 6%;
-      font-size: 2rem;
-      color: #000;
+      bottom: 16%;
+      left: 50%;
+      translate: -50% 0;
+      padding: 8px 16px;
+      margin: unset;
+      width: 72%;
+      line-height: 1.5;
       background-color: #fff;
+      color: #000;
+      transition: color 0.3s linear, background-color 0.3s linear;
 
       &.active,
       &:hover {
@@ -370,7 +385,7 @@ section {
 
 .team {
   background-color: #0e1412;
-  .team-content {
+  .team-top {
     text-align: center;
 
     .note {
@@ -390,6 +405,11 @@ section {
     }
   }
 
+  .list-member {
+    min-width: 320px;
+    flex-grow: 1;
+  }
+
   .card-member {
     position: relative;
 
@@ -404,6 +424,9 @@ section {
       left: 50%;
       translate: -50% 0;
       margin: 0;
+      padding: 8px 16px;
+      line-height: 1.5;
+      width: 72%;
       font-size: 1.8rem;
       color: #4c4c4c;
       background-color: #ffffff;
@@ -443,5 +466,217 @@ section {
     font-style: normal;
     font-weight: 400;
     line-height: 1.7;
+  }
+}
+
+.awards {
+  background-color: #f8ebc9;
+  .awards-top {
+    text-align: center;
+    margin-bottom: 35px;
+    .note {
+      color: #0e1412;
+    }
+  }
+  .awards-content {
+    --grid-gutter-y: 30px;
+    justify-content: center;
+    & > * {
+      flex-shrink: 0;
+      min-width: 250px;
+    }
+  }
+
+  .card-award {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+    background-color: #fff;
+  }
+
+  .award-img {
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
+  }
+}
+
+.testimonial {
+  .testimonial-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+  }
+
+  .btn-next,
+  .btn-prev {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    margin: unset;
+    background-color: #0e1412;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: #fd6038;
+    }
+  }
+
+  .btn-prev {
+    margin-left: auto;
+  }
+
+  .btn-next {
+    background-color: #fd6038;
+  }
+
+  .card-item {
+    border: 1px solid #e6efec;
+    padding: 30px;
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 9999px;
+      overflow: hidden;
+      box-shadow: lightgray 1px 1px;
+    }
+    .quote {
+      padding-block: 30px;
+    }
+    .quote-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .name {
+      display: flex;
+      padding-top: 12px;
+      color: #0e1412;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .note {
+      color: #586863;
+      font-size: 1.4rem;
+      line-height: 1.7;
+    }
+  }
+
+  .list-dots {
+    text-align: center;
+  }
+
+  .dot {
+    display: inline-flex;
+    padding: 6px;
+
+    &.active::before,
+    &:hover::before {
+      background: #fd6038;
+    }
+  }
+
+  .dot::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 999px;
+    transition: background 0.3s linear;
+  }
+}
+
+.question {
+  .question-top {
+    text-align: center;
+
+    .title {
+      padding-block: 6px 12px;
+    }
+    .general-ask,
+    .other-ask {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 15px;
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .general-ask {
+      color: #fd6038;
+    }
+  }
+
+  .item-ask {
+    padding: 30px;
+    border: 1px solid #dbe1e3;
+    transition: box-shadow 0.5s linear, background 0.5s linear;
+
+    .ask {
+      display: flex;
+      justify-content: space-between;
+      color: #0e1412;
+      margin-bottom: 0;
+      font-family: Manrope;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.4;
+      transition: margin-bottom 0.5s linear;
+
+      .arrow-icon {
+        padding: 6px 10px;
+        font-size: 16px;
+        background-color: #0e1412;
+        color: #fff;
+        transition: background-color 0.5s linear;
+
+        & i {
+          transition: transform 0.5s linear;
+        }
+      }
+    }
+
+    .answer {
+      max-height: 0;
+      color: #586863;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      overflow: hidden;
+      visibility: hidden;
+      transition: max-height 0.5s linear, visibility 0.5s linear;
+    }
+
+    & input {
+      display: none;
+    }
+
+    &:has(input:checked) {
+      background: #fff;
+      box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
+    }
+
+    & input:checked + .ask {
+      margin-bottom: 30px;
+    }
+
+    & input:checked ~ .answer {
+      max-height: 250px;
+      visibility: visible;
+    }
+
+    & input:checked + .ask .arrow-icon {
+      background-color: #fd6038;
+    }
+
+    & input:checked + .ask .arrow-icon i {
+      transform: rotate(540deg);
+    }
   }
 }

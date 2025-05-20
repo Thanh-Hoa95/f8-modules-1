@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+
     <%- include("./partials/head.ejs") %>
   </head>
   <body>
@@ -14,7 +15,7 @@
         <section class="hero">
           <div class="container">
             <div class="row">
-              <div class="col-6">
+              <div class="col-6 hero-banner">
                 <div class="hero-left">
                   <span class="note">#1 Law Firm in New York</span>
                   <h1 class="title">
@@ -93,7 +94,7 @@
 
         <section class="services">
           <div class="container">
-            <div class="services-content">
+            <div class="services-top">
               <span class="not">#Services</span>
               <h2 class="title">Our Practice Areas</h2>
               <p class="desc">
@@ -102,37 +103,47 @@
               </p>
             </div>
 
-            <div class="services-blog">
-              <div class="blog-card">
-                <img src="./img/img-1.png" alt="" class="blog-img" />
-                <a href="" class="btn-link btn active">Personal Injury Law</a>
+            <div class="row services-content">
+              <div class="col-4 card-wrap">
+                <div class="card">
+                  <img src="./img/img-7.png" alt="" class="card-img" />
+                  <a href="" class="btn-link btn active">Personal Injury Law</a>
+                </div>
               </div>
 
-              <div class="blog-card">
-                <img src="./img/img-7.png" alt="" class="blog-img" />
-                <a href="" class="btn-link btn">Personal Injury Law</a>
+              <div class="col-4 card-wrap">
+                <div class="card">
+                  <img src="./img/img-1.png" alt="" class="card-img" />
+                  <a href="" class="btn-link btn">Personal Injury Law</a>
+                </div>
               </div>
 
-              <div class="blog-card">
-                <img src="./img/img-3.png" alt="" class="blog-img" />
-                <a href="" class="btn-link btn">Personal Injury Law</a>
-              </div>
-            </div>
-
-            <div class="services-blog">
-              <div class="blog-card">
-                <img src="./img/img-4.png" alt="" class="blog-img" />
-                <a href="" class="btn-link btn">Personal Injury Law</a>
+              <div class="col-4 card-wrap">
+                <div class="card">
+                  <img src="./img/img-2.png" alt="" class="card-img" />
+                  <a href="" class="btn-link btn">Personal Injury Law</a>
+                </div>
               </div>
 
-              <div class="blog-card">
-                <img src="./img/img-5.png" alt="" class="blog-img" />
-                <a href="" class="btn-link btn">Personal Injury Law</a>
+              <div class="col-4 card-wrap">
+                <div class="card">
+                  <img src="./img/img-3.png" alt="" class="card-img" />
+                  <a href="" class="btn-link btn">Personal Injury Law</a>
+                </div>
               </div>
 
-              <div class="blog-card">
-                <img src="./img/img-6.png" alt="" class="blog-img" />
-                <a href="" class="btn-link btn">Personal Injury Law</a>
+              <div class="col-4 card-wrap">
+                <div class="card">
+                  <img src="./img/img-5.png" alt="" class="card-img" />
+                  <a href="" class="btn-link btn">Personal Injury Law</a>
+                </div>
+              </div>
+
+              <div class="col-4 card-wrap">
+                <div class="card">
+                  <img src="./img/img-6.png" alt="" class="card-img" />
+                  <a href="" class="btn-link btn">Personal Injury Law</a>
+                </div>
               </div>
             </div>
 
@@ -214,7 +225,7 @@
 
         <section class="team">
           <div class="container">
-            <div class="team-content">
+            <div class="team-top">
               <span class="note">#Team</span>
               <h2 class="title">Meet With Lawyers</h2>
               <p class="desc">
@@ -223,8 +234,8 @@
               </p>
             </div>
 
-            <div class="row">
-              <div class="col-4">
+            <div class="row team-content">
+              <div class="col-4 list-member">
                 <div class="card-member">
                   <img src="./img/img-4.png" alt="" class="member-img" />
                   <a href="" class="view-proflie btn active">View Profile </a>
@@ -235,7 +246,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-4 list-member">
                 <div class="card-member">
                   <img src="./img/img-5.png" alt="" class="member-img" />
                   <a href="" class="view-proflie btn">View Profile </a>
@@ -246,7 +257,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-4 list-member">
                 <div class="card-member">
                   <img src="./img/img-6.png" alt="" class="member-img" />
                   <a href="" class="view-proflie btn">View Profile </a>
@@ -257,7 +268,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-4 list-member">
                 <div class="card-member">
                   <img src="./img/img-7.png" alt="" class="member-img" />
                   <a href="" class="view-proflie btn">View Profile </a>
@@ -268,7 +279,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-4 list-member">
                 <div class="card-member">
                   <img src="./img/img-8.png" alt="" class="member-img" />
                   <a href="" class="view-proflie btn">View Profile </a>
@@ -279,7 +290,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-4 list-member">
                 <div class="card-member">
                   <img src="./img/img-4.png" alt="" class="member-img" />
                   <a href="" class="view-proflie btn">View Profile </a>
@@ -292,10 +303,205 @@
             </div>
           </div>
         </section>
+
+        <section class="awards">
+          <div class="container">
+            <div class="awards-top">
+              <span class="note">#Awards</span>
+              <h2 class="title">Our Honors & Awards</h2>
+            </div>
+
+            <div class="row awards-content">
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-22.png" alt="" class="award-img" />
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-40.png" alt="" class="award-img" />
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-37.png" alt="" class="award-img" />
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-38.png" alt="" class="award-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 testimonial-top">
+                <div>
+                  <span class="note">#Testimonial</span>
+                  <h2 class="title">What Our Clients Say About Us</h2>
+                </div>
+
+                <div class="testimonial-btn">
+                  <i class="fa-solid fa-chevron-left btn-next"></i>
+                  <i class="fa-solid fa-angle-right btn-prev"></i>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="card-item">
+                  <div class="avatar">
+                    <img src="./img/img-8.png" alt="avatar" />
+                  </div>
+                  <p class="desc quote">
+                    "I am very satisfied with this Law Office. Very
+                    professional, quick responses to calls, humble and
+                    understanding. Marty has done a lot of work for me and
+                    helped my friends and myself work through some sticky
+                    issues. His staff is professional and hard working! I
+                    recommend anyone who needs a lawyer to Marty Meason and his
+                    team."
+                  </p>
+
+                  <img src="./img/quote.png" alt="" class="quote-icon" />
+                  <span class="name">Tim Southee</span
+                  ><span class="note">UI/UX Designer</span>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="card-item">
+                  <div class="avatar">
+                    <img src="./img/img-7.png" alt="avatar" />
+                  </div>
+                  <p class="desc quote">
+                    "I am very satisfied with this Law Office. Very
+                    professional, quick responses to calls, humble and
+                    understanding. Marty has done a lot of work for me and
+                    helped my friends and myself work through some sticky
+                    issues. His staff is professional and hard working! I
+                    recommend anyone who needs a lawyer to Marty Meason and his
+                    team."
+                  </p>
+
+                  <img src="./img/quote.png" alt="" class="quote-icon" />
+                  <span class="name">Trent Boult</span
+                  ><span class="note">UI/UX Designer</span>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="card-item">
+                  <div class="avatar">
+                    <img src="./img/img-4.png" alt="avatar" />
+                  </div>
+                  <p class="desc quote">
+                    "I am very satisfied with this Law Office. Very
+                    professional, quick responses to calls, humble and
+                    understanding. Marty has done a lot of work for me and
+                    helped my friends and myself work through some sticky
+                    issues. His staff is professional and hard working! I
+                    recommend anyone who needs a lawyer to Marty Meason and his
+                    team."
+                  </p>
+
+                  <img src="./img/quote.png" alt="" class="quote-icon" />
+                  <span class="name">Matt Henry</span
+                  ><span class="note">UI/UX Designer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="question">
+          <div class="container">
+            <div class="question-top">
+              <span class="note">#FAQ</span>
+              <h2 class="title">Frequently Asked Questions</h2>
+              <span class="general-ask">General Question</span>
+              <span class="other-ask">Other Question</span>
+            </div>
+
+            <div class="lists-ask">
+              <div class="item-ask">
+                <input type="radio" name="question" id="question" />
+
+                <h3 class="ask">
+                  Why should I hire an attorney?
+                  <label class="arrow-icon" for="question">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </label>
+                </h3>
+
+                <p class="answer">
+                  When you are faced with a personal injury, the physical and
+                  emotional burden should not be taken for granted. Hiring an
+                  attorney not only provides trusted legal guidance but someone
+                  to stand in your corner when you need it most. Insurance
+                  companies are seeking their best interest and not your own, so
+                  it’s always a good idea to seek counsel.
+                </p>
+              </div>
+
+              <div class="item-ask">
+                <input type="radio" name="question" id="question-1" />
+
+                <h3 class="ask">
+                  Why should I hire an attorney?
+                  <label class="arrow-icon" for="question-1">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </label>
+                </h3>
+
+                <p class="answer">
+                  When you are faced with a personal injury, the physical and
+                  emotional burden should not be taken for granted. Hiring an
+                  attorney not only provides trusted legal guidance but someone
+                  to stand in your corner when you need it most. Insurance
+                  companies are seeking their best interest and not your own, so
+                  it’s always a good idea to seek counsel.
+                </p>
+              </div>
+
+              <div class="item-ask">
+                <input type="radio" name="question" id="question-2" />
+
+                <h3 class="ask">
+                  Why should I hire an attorney?
+                  <label class="arrow-icon" for="question-2">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </label>
+                </h3>
+
+                <p class="answer">
+                  When you are faced with a personal injury, the physical and
+                  emotional burden should not be taken for granted. Hiring an
+                  attorney not only provides trusted legal guidance but someone
+                  to stand in your corner when you need it most. Insurance
+                  companies are seeking their best interest and not your own, so
+                  it’s always a good idea to seek counsel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <%- include("./partials/footer.ejs") %>
     </div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
- 

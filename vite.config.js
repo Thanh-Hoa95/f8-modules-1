@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig(({ mode }) => {
     const isProd = mode === "production";
     return {
-        base: isProd ? "/f8-zoom-module-1/" : "/",
+        base: isProd ? "/f8-modules-1/" : "/",
         root: "src",
         publicDir: "../public",
 
@@ -21,10 +21,11 @@ export default defineConfig(({ mode }) => {
             },
         },
 
-        server: {
+         server: {
             open: true,
+            port: 3001,
         },
-
+        
         plugins: [ViteEjsPlugin()],
     };
 });

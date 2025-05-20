@@ -1,3 +1,94 @@
+@use "/scss/mixins";
+
 .header {
-    height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8ebc9;
+  display: none;
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 30px;
+
+    color: #0e1412;
+    font-family: Manrope;
+  }
 }
+
+.logo {
+  width: 84px;
+  height: 67px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    transition: color 0.3s linear;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+    }
+
+    &.active,
+    &:hover {
+      color: #fd6038;
+    }
+
+    &:hover .chevron-down {
+      transform: rotate(540deg);
+    }
+  }
+
+  .chevron-down {
+    width: 8px;
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 600;
+    transition: transform 0.3s linear;
+  }
+}
+
+.phone {
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+// @include mixins.screen(xl) {
+//     background: yellow;
+// }
+
+// @include mixins.screen(lg) {
+//     background: green;
+// }
+
+// @include mixins.screen(md) {
+//     background: blue;
+// }
+
+// @include mixins.screen(sm) {
+//     background: red;
+// }

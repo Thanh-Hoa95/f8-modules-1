@@ -1,19 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About</title>
-        <%- include("./partials/head.ejs") %>
-    </head>
-    <body>
-        <div class="wrapper">
-            <%- include("./partials/header.ejs") %>
-            <main>
-                <h1>About</h1>
-            </main>
-            <%- include("./partials/footer.ejs") %>
-        </div>
-        <script type="module" src="./main.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <%- include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%- include("./partials/header.ejs") %>
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-about">
+              <span class="note">#1 Law Firm in New York</span>
+              <h1 class="title">Where The Experience To Guide You</h1>
+              <p class="desc">
+                A law firm with deep expertise in New Jersey residential &
+                investment property transactions and many other things.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="story">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 story-content">
+                <span class="not">#Story</span>
+                <h2 class="title">Through And Complete Attention to Law</h2>
+                <p class="desc">
+                  Your initial meeting with Parmele Law Firm sets in motion the
+                  difficult – and tedious – process of getting your benefits for
+                  you.
+                </p>
+                <p class="desc">
+                  While Mr. Parmele, his paralegals, and clerks are busy
+                  assisting you with your forms, helping you assemble your
+                  documentation, and keeping you updated regularly, Mr. Parmele
+                  is busy behind the scenes, focusing on winning your case.
+                </p>
+                <p class="desc">How your case ends up may well be up to you.</p>
+              </div>
+
+              <div class="col-6 story-img">
+                <img src="./img/img-8.png" alt="" class="img-bgr" />
+                <img src="./img/banana.png" alt="" class="banana" />
+                <img src="./img/yellow.png" alt="" class="yellow" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery">
+          <div class="container">
+            <div class="gallery-top">
+              <span class="note">#Gallery</span>
+              <h2 class="title">Justice Law Firm</h2>
+              <p class="desc">
+                Our Law Office provides a professional experience for all our
+                clients, helping them navigate their legal rights.
+              </p>
+            </div>
+
+            <div class="gallery-img">
+              <img src="./img/img-5.png" alt="" class="image" />
+            </div>
+
+            <div class="list-dots">
+              <span class="dot"></span>
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="chart">
+              <ul class="list-item">
+                <li class="item">
+                  <span>1782</span>
+                  <span>Law Cases</span>
+                </li>
+                <li class="item">
+                  <span>10+</span>
+                  <span>Lawyer</span>
+                </li>
+                <li class="item">
+                  <span>98%</span>
+                  <span>Happy Clients</span>
+                </li>
+                <li class="item">
+                  <span>90%</span>
+                  <span>Winning case</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="video">
+          <div class="container">
+            <div class="video-top">
+              <span class="note">#Video</span>
+              <h2 class="title">Our History & Mission</h2>
+              <p class="desc">
+                Our Law Office provides a professional experience for all our
+                clients, helping them navigate their legal rights.
+              </p>
+            </div>
+
+            <div class="video-img">
+              <img src="./img/img-9.png" alt="" class="image" />
+
+              <div class="play-icon">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="team">
+          <div class="container">
+            <div class="team-top">
+              <span class="note">#Team</span>
+              <h2 class="title">Meet With Lawyers</h2>
+              <p class="desc">
+                Our team of experienced team more than $150 Million in
+                Settlements and Judgments for Our Clients
+              </p>
+            </div>
+
+            <div class="row team-content">
+              <div class="col-4 list-member">
+                <div class="card-member">
+                  <div class="member-pro">
+                    <img src="./img/img-4.png" alt="" class="member-img" />
+                    <a href="" class="view-proflie btn active">View Profile </a>
+                  </div>
+
+                  <div class="member-info">
+                    <h3 class="member-name">Jamie Watts</h3>
+                    <p class="member-job">Partner</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4 list-member">
+                <div class="card-member">
+                  <div class="member-pro">
+                    <img src="./img/img-5.png" alt="" class="member-img" />
+                    <a href="" class="view-proflie btn">View Profile </a>
+                  </div>
+                  <div class="member-info">
+                    <h3 class="member-name">Aaron Finch</h3>
+                    <p class="member-job">Founding President</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4 list-member">
+                <div class="card-member">
+                  <div class="member-pro">
+                    <img src="./img/img-6.png" alt="" class="member-img" />
+                    <a href="" class="view-proflie btn">View Profile </a>
+                  </div>
+                  <div class="member-info">
+                    <h3 class="member-name">Jamie Watts</h3>
+                    <p class="member-job">Partner</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4 list-member">
+                <div class="card-member">
+                  <div class="member-pro">
+                    <img src="./img/img-7.png" alt="" class="member-img" />
+                    <a href="" class="view-proflie btn">View Profile </a>
+                  </div>
+                  <div class="member-info">
+                    <h3 class="member-name">Ellyse Perry</h3>
+                    <p class="member-job">Associate Attorney</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4 list-member">
+                <div class="card-member">
+                  <div class="member-pro">
+                    <img src="./img/img-8.png" alt="" class="member-img" />
+                    <a href="" class="view-proflie btn">View Profile </a>
+                  </div>
+                  <div class="member-info">
+                    <h3 class="member-name">Meg Lanning</h3>
+                    <p class="member-job">Senior Partner</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4 list-member">
+                <div class="card-member">
+                  <div class="member-pro">
+                    <img src="./img/img-4.png" alt="" class="member-img" />
+                    <a href="" class="view-proflie btn">View Profile </a>
+                  </div>
+                  <div class="member-info">
+                    <h3 class="member-name">Peter Siddle</h3>
+                    <p class="member-job">Of Counsel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="awards">
+          <div class="container">
+            <div class="awards-top">
+              <span class="note">#Awards</span>
+              <h2 class="title">Our Honors & Awards</h2>
+            </div>
+
+            <div class="row awards-content">
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-22.png" alt="" class="award-img" />
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-40.png" alt="" class="award-img" />
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-37.png" alt="" class="award-img" />
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card-award">
+                  <img src="./img/image-38.png" alt="" class="award-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dealing">
+          <div class="container">
+            <span class="note">#CTA</span>
+            <h2 class="title">Dealing With a Issue?</h2>
+            <p class="desc">
+              <span>
+                Where every injury is personal. We are a different kind of law
+                firm. Let our small, passionate group of trial lawyers fight for
+                your rights!
+              </span>
+            </p>
+
+            <button class="btn dealing-btn">Get a Consultations</button>
+          </div>
+        </section>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

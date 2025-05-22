@@ -411,7 +411,9 @@ section {
   }
 
   .card-member {
-    position: relative;
+    .member-pro {
+      position: relative;
+    }
 
     .member-img {
       aspect-ratio: 1/1;
@@ -420,7 +422,7 @@ section {
     }
     .view-proflie {
       position: absolute;
-      top: 100%;
+      bottom: -12%;
       left: 50%;
       translate: -50% 0;
       margin: 0;
@@ -433,14 +435,15 @@ section {
       opacity: 0;
       border-radius: 4px;
       visibility: hidden;
-      transition: visibility 0.3s linear, opacity 0.3s linear, top 0.3s linear,
-        color 0.3s linear, background-color 0.3s linear;
+      transition: visibility 0.3s linear, opacity 0.3s linear,
+        bottom 0.3s linear, color 0.3s linear, background-color 0.3s linear;
     }
     .view-proflie.active,
     &:hover .view-proflie {
       opacity: 1;
       visibility: visible;
-      top: 66%;
+      top: unset;
+      bottom: 22px;
       color: #fff;
       background-color: #fd6038;
     }
@@ -494,6 +497,7 @@ section {
 
     padding: 22px;
     background-color: #fff;
+    cursor: pointer;
   }
 
   .award-img {
@@ -511,8 +515,19 @@ section {
     margin-bottom: 35px;
   }
 
+  .testimonial-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
   .btn-next,
   .btn-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     padding: 12px;
@@ -538,13 +553,7 @@ section {
   .card-item {
     border: 1px solid #e6efec;
     padding: 30px;
-    .avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 9999px;
-      overflow: hidden;
-      box-shadow: lightgray 1px 1px;
-    }
+
     .quote {
       padding-block: 30px;
     }
@@ -569,7 +578,9 @@ section {
   }
 
   .list-dots {
+    margin-top: 30px;
     text-align: center;
+    cursor: pointer;
   }
 
   .dot {
@@ -592,8 +603,18 @@ section {
   }
 }
 
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  box-shadow: lightgray 1px 1px;
+}
+
 .question {
   .question-top {
+    margin-bottom: 70px;
     text-align: center;
 
     .title {
@@ -607,6 +628,7 @@ section {
       padding: 6px 15px;
       font-size: 1.8rem;
       line-height: 1.6;
+      cursor: pointer;
     }
 
     .general-ask {
@@ -629,6 +651,7 @@ section {
       font-weight: 700;
       line-height: 1.4;
       transition: margin-bottom 0.5s linear;
+      cursor: pointer;
 
       .arrow-icon {
         padding: 6px 10px;
@@ -636,6 +659,7 @@ section {
         background-color: #0e1412;
         color: #fff;
         transition: background-color 0.5s linear;
+        cursor: pointer;
 
         & i {
           transition: transform 0.5s linear;
@@ -678,5 +702,131 @@ section {
     & input:checked + .ask .arrow-icon i {
       transform: rotate(540deg);
     }
+  }
+}
+
+.blog {
+  .blog-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    .title {
+      padding-block: 6px 12px;
+    }
+
+    .desc {
+      max-width: 470px;
+      margin-top: 6px;
+    }
+
+    .blog-btn {
+      color: #fff;
+      background-color: #fd6038;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .card-img {
+    display: flex;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .card-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .avatar {
+    margin-block: 20px;
+  }
+
+  .name {
+    color: #0e1412;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .address {
+    color: #586863;
+    line-height: 1.7;
+  }
+
+  .rules {
+    margin-bottom: 12px;
+    color: #181d1f;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .more {
+    color: #0e1412;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+    transition: color 0.3s linear;
+
+    &.active,
+    &:hover {
+      color: #fd6038;
+    }
+  }
+}
+
+.dealing {
+  text-align: center;
+  background-color: #017848;
+  color: #fff;
+
+  .note {
+    color: #fff;
+  }
+
+  .title {
+    margin-block: 6px 12px;
+    color: #fff;
+  }
+
+  .desc span {
+    display: inline-block;
+    max-width: 470px;
+    margin-top: 6px;
+  }
+
+  .dealing-btn {
+    background-color: #fd6038;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero .hero-row {
+    --grid-gutter-y: 150px;
+  }
+
+  .about .about-banner {
+    display: none;
+  }
+
+  .testimonial .col-4:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .row {
+    --grid-gutter-y: 50px;
   }
 }

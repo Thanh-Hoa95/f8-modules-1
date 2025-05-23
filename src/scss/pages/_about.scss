@@ -113,8 +113,7 @@
     .list-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 100px;
+      justify-content: space-between;
       padding-top: 62px;
     }
 
@@ -184,5 +183,12 @@
       background-color: #fff;
       border-radius: 999px;
     }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .list-item {
+    display: block;
+    flex-direction: column;
   }
 }

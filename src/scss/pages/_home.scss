@@ -44,6 +44,10 @@ section {
   margin-top: 100px;
   background-color: #f8ebc9;
 
+  .hero-row {
+    padding-top: 26px;
+  }
+
   .note {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -133,7 +137,6 @@ section {
       left: -10%;
       width: 24%;
       height: 24%;
-      padding-top: 26px;
       cursor: pointer;
     }
 
@@ -712,6 +715,7 @@ section {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 70px;
+    padding-top: 60px;
 
     .title {
       padding-block: 6px 12px;
@@ -734,6 +738,7 @@ section {
 
   .card-img {
     display: flex;
+    margin-bottom: 16px;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
@@ -769,6 +774,8 @@ section {
   }
 
   .more {
+    display: block;
+    margin-bottom: 16px;
     color: #0e1412;
     font-size: 1.8rem;
     font-weight: 600;

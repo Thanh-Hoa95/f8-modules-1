@@ -37,7 +37,7 @@
   .banana {
     position: absolute;
     bottom: 14%;
-    left: -10%;
+    left: -14%;
     width: 32%;
     height: 26%;
   }
@@ -45,7 +45,7 @@
   .yellow {
     position: absolute;
     top: 0%;
-    right: 3%;
+    right: 0;
     width: 4%;
     height: 42%;
   }
@@ -106,34 +106,35 @@
   }
 
   .chart {
-    height: 200px;
-    margin-top: 70px;
-    background: #fed464;
+    background-color: #ffd45c;
+    padding: 40px 0;
+    text-align: center;
 
     .list-item {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 62px;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 60px;
     }
 
     .item {
       display: flex;
       flex-direction: column;
+      align-items: center;
+    }
 
-      span:first-child {
-        color: #0e1412;
-        font-size: 6rem;
-        font-weight: 800;
-        line-height: 1.1;
-      }
+    .item span:first-child {
+      font-size: 32px;
+      font-weight: bold;
+      color: #111;
+    }
 
-      span:last-child {
-        color: #0e1412;
-        text-align: center;
-        font-size: 1.8rem;
-        line-height: 1.6;
-      }
+    .item span:last-child {
+      font-size: 14px;
+      color: #111;
+      margin-top: 5px;
     }
   }
 }
@@ -182,6 +183,7 @@
       height: 100px;
       background-color: #fff;
       border-radius: 999px;
+      cursor: pointer;
     }
   }
 }

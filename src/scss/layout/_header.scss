@@ -76,6 +76,13 @@
   font-weight: 700;
   line-height: 1.5;
 }
+
+@media (max-width: 1199.98px) {
+  .header-contact {
+    display: none;
+  }
+}
+
 @media (max-width: 991.98px) {
   .header-contact {
     display: none;

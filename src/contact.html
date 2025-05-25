@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <%- include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%- include("./partials/header.ejs") %>
+
+      <main>
+        <section class="contact">
+          <div class="container">
+            <div class="contact-top">
+              <span class="note">Contact us</span>
+              <h1 class="title">We Are Always Ready To Hear For You.</h1>
+              <p class="desc">
+                The right move at the right time saves your investment. Live the
+                dream of expanding your business.
+              </p>
+            </div>
+
+            <from class="from">
+              <div class="from__content">
+                <label class="from__group">
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    class="from__input"
+                  />
+                </label>
+
+                <label class="from__group">
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    class="from__input"
+                  />
+                </label>
+
+                <label class="from__group">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    class="from__input"
+                  />
+                </label>
+
+                <label class="from__group">
+                  <input
+                    type="text"
+                    placeholder="Your phone"
+                    class="from__input"
+                  />
+                </label>
+
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Write message"
+                  class="from__textarea"
+                ></textarea>
+              </div>
+              <button class="btn contact-btn">Contact us</button>
+            </from>
+          </div>
+        </section>
+      </main>
+
+      <%- include("./partials/footer.ejs") %>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
